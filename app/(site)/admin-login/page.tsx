@@ -32,7 +32,7 @@ export default function AdminLoginPage() {
     <div className="flex-1 flex flex-col items-center justify-center bg-stone-100 py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8 bg-white p-10 rounded-xl shadow-sm border border-stone-200">
         <div>
-          <h2 className="mt-6 text-center text-3xl font-serif font-bold text-stone-900">
+          <h2 className="mt-6 text-center text-3xl font-sans font-bold text-stone-900">
             Admin Login
           </h2>
           <p className="mt-2 text-center text-sm text-stone-600">

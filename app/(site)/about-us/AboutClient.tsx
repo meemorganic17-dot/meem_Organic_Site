@@ -62,9 +62,9 @@ function HeroSection() {
             <span>Origin Integrity & Global Trade Leadership</span>
           </motion.div>
 
-          <motion.h1 variants={fadeUp} className="font-serif text-5xl sm:text-6xl font-bold text-white leading-[1.1] mb-6 tracking-tight">
+          <motion.h1 variants={fadeUp} className="font-sans text-5xl sm:text-6xl font-bold text-white leading-[1.1] mb-6 tracking-tight">
             Cultivating Excellence, <br />
-            <span className="text-[#C8A14A] italic font-serif">Exporting Trust.</span>
+            <span className="text-[#C8A14A] italic font-sans">Exporting Trust.</span>
           </motion.h1>
 
           <motion.p variants={fadeUp} className="text-base sm:text-lg text-gray-300 leading-relaxed mb-8 font-light max-w-xl">
@@ -97,15 +97,15 @@ function HeroSection() {
         >
           <div className="bg-gradient-to-b from-white/10 to-white/5 border border-white/15 rounded-3xl p-6 sm:p-8 backdrop-blur-xl shadow-2xl">
             <span className="text-[11px] uppercase tracking-wider font-bold text-[#C8A14A] block mb-2">Trade Footprint</span>
-            <h3 className="text-2xl font-serif font-bold text-white mb-6">Partner Farms & Global Reach</h3>
+            <h3 className="text-2xl font-sans font-bold text-white mb-6">Partner Farms & Global Reach</h3>
 
             <div className="grid grid-cols-2 gap-4 mb-6">
               <div className="p-4 rounded-2xl bg-white/5 border border-white/10">
-                <div className="text-2xl font-serif font-bold text-[#C8A14A]">35+</div>
+                <div className="text-2xl font-sans font-bold text-[#C8A14A]">35+</div>
                 <div className="text-xs text-gray-300 mt-1">Countries Served</div>
               </div>
               <div className="p-4 rounded-2xl bg-white/5 border border-white/10">
-                <div className="text-2xl font-serif font-bold text-white">500+</div>
+                <div className="text-2xl font-sans font-bold text-white">500+</div>
                 <div className="text-xs text-gray-300 mt-1">Partner Farms</div>
               </div>
             </div>
@@ -144,7 +144,7 @@ function StatsSection() {
               <div className="w-12 h-12 mx-auto bg-[#14532D]/5 rounded-xl flex items-center justify-center mb-4">
                 <stat.icon className="w-6 h-6 text-[#14532D]" />
               </div>
-              <h3 className="text-3xl font-serif font-bold text-gray-900 mb-1">{stat.num}</h3>
+              <h3 className="text-3xl font-sans font-bold text-gray-900 mb-1">{stat.num}</h3>
               <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider">{stat.label}</p>
             </motion.div>
           ))}
@@ -163,7 +163,7 @@ function OurStorySection() {
             <span className="text-xs font-bold uppercase tracking-widest text-[#C8A14A] block">
               The Journey
             </span>
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-gray-900 leading-tight">
+            <h2 className="text-4xl md:text-5xl font-sans font-bold text-gray-900 leading-tight">
               From Local Fields to <br /> Global Markets.
             </h2>
             <div className="space-y-4 text-gray-600 text-base font-light leading-relaxed">
@@ -205,7 +205,7 @@ function MissionVisionSection() {
             <div className="w-12 h-12 bg-[#C8A14A] rounded-xl flex items-center justify-center mb-6 text-white shadow-md">
               <Target className="w-6 h-6" />
             </div>
-            <h3 className="text-2xl font-serif font-bold mb-4">Our Mission</h3>
+            <h3 className="text-2xl font-sans font-bold mb-4">Our Mission</h3>
             <p className="text-sm sm:text-base text-gray-300 leading-relaxed font-light">
               To seamlessly connect the world with nature&apos;s finest agricultural produce through a sustainable, transparent, and highly efficient global supply chain.
             </p>
@@ -215,7 +215,7 @@ function MissionVisionSection() {
             <div className="w-12 h-12 bg-[#14532D] rounded-xl flex items-center justify-center mb-6 text-white border border-[#C8A14A]/40 shadow-md">
               <Globe className="w-6 h-6 text-[#C8A14A]" />
             </div>
-            <h3 className="text-2xl font-serif font-bold mb-4">Our Vision</h3>
+            <h3 className="text-2xl font-sans font-bold mb-4">Our Vision</h3>
             <p className="text-sm sm:text-base text-gray-300 leading-relaxed font-light">
               To be the globally recognized benchmark for excellence in the organic food export industry, synonymous with quality, ethical trading, and environmental stewardship.
             </p>
@@ -238,7 +238,7 @@ function ValuesSection() {
     <section className="py-24 md:py-32 bg-[#F8FAF8]">
       <div className="container mx-auto px-6 md:px-12 text-center">
         <span className="text-xs font-bold uppercase tracking-widest text-[#C8A14A] mb-2 block">Core Principles</span>
-        <h2 className="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-16">Values That Drive Us</h2>
+        <h2 className="text-4xl md:text-5xl font-sans font-bold text-gray-900 mb-16">Values That Drive Us</h2>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {values.map((v, i) => (
@@ -246,7 +246,7 @@ function ValuesSection() {
               <div className="w-12 h-12 rounded-xl bg-[#14532D]/5 flex items-center justify-center mb-5 text-[#14532D]">
                 <v.icon className="w-6 h-6" />
               </div>
-              <h3 className="text-lg font-serif font-bold text-gray-900 mb-2">{v.title}</h3>
+              <h3 className="text-lg font-sans font-bold text-gray-900 mb-2">{v.title}</h3>
               <p className="text-xs text-gray-600 leading-relaxed font-light">{v.desc}</p>
             </div>
           ))}
@@ -261,7 +261,7 @@ function CTABanner() {
     <section className="py-20 px-6 md:px-12 bg-white">
       <div className="container mx-auto max-w-5xl rounded-3xl bg-[#14532D] p-10 sm:p-16 text-center text-white relative overflow-hidden shadow-xl">
         <div className="relative z-10 max-w-2xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-serif font-bold mb-4">Ready to start importing premium goods?</h2>
+          <h2 className="text-3xl sm:text-4xl font-sans font-bold mb-4">Ready to start importing premium goods?</h2>
           <p className="text-sm text-green-100 mb-8 font-light">Join hundreds of international buyers who trust Meeem Organic World for their wholesale supply needs.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact-us/request-import-quote" className="rounded-full bg-[#C8A14A] px-8 py-3.5 text-sm font-semibold hover:bg-[#b08d3f] transition-colors shadow-md">

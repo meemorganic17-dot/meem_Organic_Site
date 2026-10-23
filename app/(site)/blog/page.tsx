@@ -30,7 +30,7 @@ export default async function BlogIndexPage() {
     <div className="flex-1 bg-stone-50 py-12 md:py-20">
       <div className="container mx-auto px-4 md:px-6 max-w-5xl">
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-serif font-bold text-stone-900 mb-6">Market Insights & News</h1>
+          <h1 className="text-4xl md:text-5xl font-sans font-bold text-stone-900 mb-6">Market Insights & News</h1>
           <p className="text-lg text-stone-600 max-w-2xl mx-auto">
             Stay updated with the latest trends in international trade, agricultural seasons, and company news.
           </p>
@@ -62,7 +62,7 @@ export default async function BlogIndexPage() {
                   </Link>
                 )}
                 <Link href={`/blog/${post.slug}`} className="block mb-3">
-                  <h2 className="text-xl font-serif font-bold text-stone-900 group-hover:text-primary transition-colors line-clamp-2">{post.title}</h2>
+                  <h2 className="text-xl font-sans font-bold text-stone-900 group-hover:text-primary transition-colors line-clamp-2">{post.title}</h2>
                 </Link>
                 <p className="text-stone-600 text-sm line-clamp-3 mb-4 flex-1">
                   {post.excerpt}

@@ -79,7 +79,7 @@ export default function ServicesPage() {
                       <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#14532D]/10 to-[#14532D]/5 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
                         <Icon className="w-8 h-8 text-[#14532D]" />
                       </div>
-                      <h2 className="text-3xl font-serif font-bold text-stone-900 mb-4">{service.title}</h2>
+                      <h2 className="text-3xl font-sans font-bold text-stone-900 mb-4">{service.title}</h2>
                       <p className="text-lg text-stone-600 font-medium mb-4">{service.desc}</p>
                       <p className="text-stone-500 leading-relaxed mb-10 font-light">{service.details}</p>
                       
@@ -116,7 +116,7 @@ export default function ServicesPage() {
       {/* CTA Section */}
       <section className="py-20 bg-stone-100 border-t border-stone-200">
         <div className="container mx-auto px-6 text-center max-w-3xl">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-900 mb-6">Ready to expand your horizons?</h2>
+          <h2 className="text-3xl md:text-4xl font-sans font-bold text-stone-900 mb-6">Ready to expand your horizons?</h2>
           <p className="text-stone-600 mb-8 text-base font-light">Whether you are looking to register, buy, or supply, our dedicated team is here to support you at every step.</p>
           <Link href="/contact-us" className="inline-flex items-center justify-center gap-2 bg-[#C8A14A] text-white px-8 py-3.5 rounded-full font-bold tracking-wider uppercase hover:bg-[#14532D] transition-colors shadow-lg">
             Get in touch <ArrowRight className="w-4 h-4" />

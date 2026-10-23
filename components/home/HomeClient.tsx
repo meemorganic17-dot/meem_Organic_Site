@@ -110,9 +110,9 @@ function HeroSection() {
           </motion.div>
 
           {/* Main Headline */}
-          <motion.h1 variants={fadeUp} className="font-serif text-5xl sm:text-6xl xl:text-7xl font-bold text-white leading-[1.08] mb-6 tracking-tight">
+          <motion.h1 variants={fadeUp} className="font-sans text-5xl sm:text-6xl xl:text-7xl font-bold text-white leading-[1.08] mb-6 tracking-tight">
             Premium Organic Products <br />
-            <span className="text-[#C8A14A] italic font-serif">Exported Worldwide</span>
+            <span className="text-[#C8A14A] italic font-sans">Exported Worldwide</span>
             <span className="block text-2xl sm:text-3xl font-sans font-normal text-gray-300 mt-3">
               Bringing Nature To The World.
             </span>
@@ -142,15 +142,15 @@ function HeroSection() {
           {/* Key Assurance Indicators */}
           <motion.div variants={fadeUp} className="grid grid-cols-3 gap-6 pt-6 border-t border-white/10 max-w-lg">
             <div>
-              <div className="text-2xl font-serif font-bold text-white">99.4%</div>
+              <div className="text-2xl font-sans font-bold text-white">99.4%</div>
               <div className="text-[11px] uppercase tracking-wider text-gray-400 mt-0.5 font-medium">On-Time Clearance</div>
             </div>
             <div>
-              <div className="text-2xl font-serif font-bold text-[#C8A14A]">100%</div>
+              <div className="text-2xl font-sans font-bold text-[#C8A14A]">100%</div>
               <div className="text-[11px] uppercase tracking-wider text-gray-400 mt-0.5 font-medium">Certified Organic</div>
             </div>
             <div>
-              <div className="text-2xl font-serif font-bold text-white">35+</div>
+              <div className="text-2xl font-sans font-bold text-white">35+</div>
               <div className="text-[11px] uppercase tracking-wider text-gray-400 mt-0.5 font-medium">Global Ports</div>
             </div>
           </motion.div>
@@ -188,7 +188,7 @@ function HeroSection() {
                   <span className="flex items-center gap-1.5"><Thermometer className="w-3.5 h-3.5 text-[#C8A14A]" /> Cold Chain: +4°C</span>
                   <span className="flex items-center gap-1.5"><ShieldCheck className="w-3.5 h-3.5 text-emerald-400" /> Phytosanitary Inspected</span>
                 </div>
-                <h3 className="text-xl font-serif font-bold text-white mb-1">
+                <h3 className="text-xl font-sans font-bold text-white mb-1">
                   Premium Orchard Fresh Produce
                 </h3>
                 <p className="text-xs text-gray-300 line-clamp-1">
@@ -343,11 +343,11 @@ function AboutSection() {
             <div className="absolute -bottom-8 -right-4 sm:-right-8 bg-[#14532D] text-white p-7 rounded-2xl shadow-2xl border border-white/10 w-[88%] sm:w-[75%] max-w-sm">
               <div className="grid grid-cols-2 gap-6">
                 <div>
-                  <div className="text-3xl font-serif font-bold text-[#C8A14A]">15+</div>
+                  <div className="text-3xl font-sans font-bold text-[#C8A14A]">15+</div>
                   <div className="text-[11px] uppercase tracking-wider text-green-100 mt-1 font-semibold">Years Experience</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-serif font-bold text-white">1000+</div>
+                  <div className="text-3xl font-sans font-bold text-white">1000+</div>
                   <div className="text-[11px] uppercase tracking-wider text-green-100 mt-1 font-semibold">Containers Exported</div>
                 </div>
               </div>
@@ -370,9 +370,9 @@ function AboutSection() {
               <Leaf className="w-3.5 h-3.5" /> About Meeem Organic World
             </div>
             
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#1A1A1A] mb-6 leading-tight">
+            <h2 className="text-4xl md:text-5xl font-sans font-bold text-[#1A1A1A] mb-6 leading-tight">
               Rooted in Nature, <br />
-              <span className="text-[#C8A14A] italic font-serif">Delivered to the World.</span>
+              <span className="text-[#C8A14A] italic font-sans">Delivered to the World.</span>
             </h2>
 
             <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-6 font-light">
@@ -419,7 +419,7 @@ function CategoriesSection({ categories }: { categories: { id: string; slug: str
             <span className="text-xs font-bold uppercase tracking-widest text-[#C8A14A] mb-2 block">
               Product Portfolio
             </span>
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#1A1A1A]">
+            <h2 className="text-4xl md:text-5xl font-sans font-bold text-[#1A1A1A]">
               Premium Export Categories
             </h2>
           </div>
@@ -455,7 +455,7 @@ function CategoriesSection({ categories }: { categories: { id: string; slug: str
                 <span className="text-[11px] uppercase tracking-widest font-semibold text-[#C8A14A] mb-2">
                   Export Grade A
                 </span>
-                <h3 className="text-2xl font-serif font-bold text-white mb-2">{cat.name}</h3>
+                <h3 className="text-2xl font-sans font-bold text-white mb-2">{cat.name}</h3>
                 <p className="text-gray-300 text-xs mb-6 opacity-85 line-clamp-2">
                   {cat.description || "Premium export quality organic produce sourced from certified sustainable farms."}
                 </p>
@@ -484,7 +484,7 @@ function WhyChooseUsSection() {
           <span className="text-xs font-bold uppercase tracking-widest text-[#C8A14A] mb-2 block">
             The Meeem Advantage
           </span>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#1A1A1A] mb-4">
+          <h2 className="text-4xl md:text-5xl font-sans font-bold text-[#1A1A1A] mb-4">
             Why Choose Us
           </h2>
           <p className="text-gray-600 text-base sm:text-lg font-light">
@@ -503,7 +503,7 @@ function WhyChooseUsSection() {
                 <Thermometer className="w-6 h-6" />
               </div>
               <span className="text-xs font-bold uppercase tracking-wider text-[#C8A14A]">Core Competency</span>
-              <h3 className="text-2xl sm:text-3xl font-serif font-bold mt-2 mb-4">
+              <h3 className="text-2xl sm:text-3xl font-sans font-bold mt-2 mb-4">
                 End-to-End Cold Chain & Reefer Monitoring
               </h3>
               <p className="text-green-100 text-sm sm:text-base leading-relaxed max-w-xl font-light">
@@ -534,7 +534,7 @@ function WhyChooseUsSection() {
                 <ShieldCheck className="w-6 h-6" />
               </div>
               <span className="text-xs font-bold uppercase tracking-wider text-gray-500">Quality Standards</span>
-              <h3 className="text-xl font-serif font-bold text-gray-900 mt-2 mb-3">
+              <h3 className="text-xl font-sans font-bold text-gray-900 mt-2 mb-3">
                 Laboratory Tested Batches
               </h3>
               <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
@@ -554,7 +554,7 @@ function WhyChooseUsSection() {
                 <Ship className="w-6 h-6" />
               </div>
               <span className="text-xs font-bold uppercase tracking-wider text-gray-500">Logistics</span>
-              <h3 className="text-xl font-serif font-bold text-gray-900 mt-2 mb-3">
+              <h3 className="text-xl font-sans font-bold text-gray-900 mt-2 mb-3">
                 DDP & Customs Clearance
               </h3>
               <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
@@ -573,7 +573,7 @@ function WhyChooseUsSection() {
                 <Package className="w-6 h-6" />
               </div>
               <span className="text-xs font-bold uppercase tracking-wider text-gray-500">Packaging</span>
-              <h3 className="text-xl font-serif font-bold text-gray-900 mt-2 mb-3">
+              <h3 className="text-xl font-sans font-bold text-gray-900 mt-2 mb-3">
                 Export Grade Packaging
               </h3>
               <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
@@ -592,7 +592,7 @@ function WhyChooseUsSection() {
                 <Clock className="w-6 h-6 text-[#C8A14A]" />
               </div>
               <span className="text-xs font-bold uppercase tracking-wider text-gray-500">Reliability</span>
-              <h3 className="text-xl font-serif font-bold text-gray-900 mt-2 mb-3">
+              <h3 className="text-xl font-sans font-bold text-gray-900 mt-2 mb-3">
                 On-Time Global Delivery
               </h3>
               <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
@@ -645,7 +645,7 @@ function ExportProcess() {
           <span className="text-xs font-bold uppercase tracking-widest text-[#C8A14A] mb-2 block">
             Export Process
           </span>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#1A1A1A] mb-4">
+          <h2 className="text-4xl md:text-5xl font-sans font-bold text-[#1A1A1A] mb-4">
             Our Timeline to Your Door
           </h2>
           <p className="text-gray-600 text-base font-light">
@@ -675,7 +675,7 @@ function ExportProcess() {
                   {stage.num}
                 </div>
               </div>
-              <h3 className="text-xl font-serif font-bold text-gray-900 mb-2">
+              <h3 className="text-xl font-sans font-bold text-gray-900 mb-2">
                 {stage.title}
               </h3>
               <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-light">
@@ -708,7 +708,7 @@ function QualityAssurance() {
               <div className="absolute inset-0 bg-gradient-to-t from-[#0A1A11]/90 via-transparent to-transparent" />
               <div className="absolute bottom-6 left-6 right-6 text-white">
                 <span className="text-[10px] font-bold uppercase tracking-widest text-[#C8A14A]">Global Logistics</span>
-                <h4 className="text-2xl font-serif font-bold mt-1">Uncompromising Standards</h4>
+                <h4 className="text-2xl font-sans font-bold mt-1">Uncompromising Standards</h4>
                 <p className="text-xs text-gray-300 mt-1 font-light">Direct container loading at major export ports with cold chain integration.</p>
               </div>
             </div>
@@ -719,7 +719,7 @@ function QualityAssurance() {
             <span className="text-xs font-bold uppercase tracking-widest text-[#C8A14A] mb-2 block">
               Quality Assurance
             </span>
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#1A1A1A] mb-6 leading-tight">
+            <h2 className="text-4xl md:text-5xl font-sans font-bold text-[#1A1A1A] mb-6 leading-tight">
               Uncompromising Standards at Every Step
             </h2>
             <p className="text-gray-600 text-base sm:text-lg font-light leading-relaxed mb-8">
@@ -728,15 +728,15 @@ function QualityAssurance() {
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div className="bg-white p-5 rounded-2xl border border-gray-100 shadow-xs border-l-4 border-l-[#14532D]">
-                <div className="text-2xl font-serif font-bold text-[#14532D]">99%</div>
+                <div className="text-2xl font-sans font-bold text-[#14532D]">99%</div>
                 <div className="text-xs text-gray-500 font-medium mt-1">Inspection Pass Rate</div>
               </div>
               <div className="bg-white p-5 rounded-2xl border border-gray-100 shadow-xs border-l-4 border-l-[#C8A14A]">
-                <div className="text-2xl font-serif font-bold text-[#C8A14A]">100%</div>
+                <div className="text-2xl font-sans font-bold text-[#C8A14A]">100%</div>
                 <div className="text-xs text-gray-500 font-medium mt-1">Farm Traceability</div>
               </div>
               <div className="bg-white p-5 rounded-2xl border border-gray-100 shadow-xs border-l-4 border-l-[#14532D]">
-                <div className="text-2xl font-serif font-bold text-[#14532D]">24/7</div>
+                <div className="text-2xl font-sans font-bold text-[#14532D]">24/7</div>
                 <div className="text-xs text-gray-500 font-medium mt-1">Cold Chain Monitoring</div>
               </div>
             </div>
@@ -795,7 +795,7 @@ function FeaturedProducts() {
             <span className="text-xs font-bold uppercase tracking-widest text-[#C8A14A] mb-2 block">
               Export Highlights
             </span>
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#1A1A1A]">
+            <h2 className="text-4xl md:text-5xl font-sans font-bold text-[#1A1A1A]">
               Featured Commodities
             </h2>
           </div>
@@ -833,7 +833,7 @@ function FeaturedProducts() {
                 </div>
                 
                 <div className="p-5">
-                  <h3 className="font-serif font-bold text-lg text-gray-900 mb-1 group-hover:text-[#14532D] transition-colors">
+                  <h3 className="font-sans font-bold text-lg text-gray-900 mb-1 group-hover:text-[#14532D] transition-colors">
                     {p.name}
                   </h3>
                   <div className="text-[11px] text-gray-500 mb-3">{p.grade}</div>
@@ -868,7 +868,7 @@ function ExportMap() {
         <span className="text-xs font-bold uppercase tracking-widest text-[#C8A14A] mb-2 block">
           Global Network
         </span>
-        <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4">
+        <h2 className="text-4xl md:text-5xl font-sans font-bold mb-4">
           Our Export Destinations
         </h2>
         <p className="text-gray-400 max-w-2xl mx-auto text-base font-light">
@@ -925,9 +925,9 @@ function GlobalLogistics() {
             <span className="text-xs font-bold uppercase tracking-widest text-[#14532D] mb-2 block">
               <Ship className="w-4 h-4 inline mr-1 text-[#C8A14A]" /> Global Reach
             </span>
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#14532D] mb-6 leading-tight">
+            <h2 className="text-4xl md:text-5xl font-sans font-bold text-[#14532D] mb-6 leading-tight">
               Seamless Logistics, <br />
-              <span className="text-[#C8A14A] italic font-serif">From Farm to Port</span>
+              <span className="text-[#C8A14A] italic font-sans">From Farm to Port</span>
             </h2>
             <p className="text-gray-600 text-base sm:text-lg font-light leading-relaxed mb-8">
               We ensure our premium organic produce reaches you in perfect condition. Through our state-of-the-art cold chain network, ocean freight, and express air cargo solutions, we deliver across continents without compromising on freshness.
@@ -974,7 +974,7 @@ function Sustainability() {
             <span className="text-xs font-bold uppercase tracking-widest text-[#22C55E] mb-2 block">
               Sustainability Commitment
             </span>
-            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#1A1A1A] mb-6">
+            <h2 className="text-3xl sm:text-4xl font-sans font-bold text-[#1A1A1A] mb-6">
               Farming for the Future
             </h2>
             <p className="text-gray-600 text-base leading-relaxed mb-8 font-light">
@@ -1035,7 +1035,7 @@ function Testimonials() {
           <span className="text-xs font-bold uppercase tracking-widest text-[#C8A14A] mb-2 block">
             Client Endorsements
           </span>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl font-sans font-bold mb-4">
             Trusted by Global Importers
           </h2>
         </div>
@@ -1074,7 +1074,7 @@ function LatestArticles() {
             <span className="text-xs font-bold uppercase tracking-widest text-[#C8A14A] mb-2 block">
               News & Insights
             </span>
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#1A1A1A]">
+            <h2 className="text-4xl md:text-5xl font-sans font-bold text-[#1A1A1A]">
               Latest Articles
             </h2>
           </div>
@@ -1102,7 +1102,7 @@ function LatestArticles() {
               <div className="text-[11px] font-bold uppercase tracking-wider text-[#14532D] mb-2">
                 {a.category} • {a.date}
               </div>
-              <h3 className="text-lg font-serif font-bold text-[#1A1A1A] group-hover:text-[#14532D] transition-colors leading-snug">
+              <h3 className="text-lg font-sans font-bold text-[#1A1A1A] group-hover:text-[#14532D] transition-colors leading-snug">
                 {a.title}
               </h3>
             </div>
@@ -1125,7 +1125,7 @@ function CTABanner() {
           <span className="text-xs font-bold uppercase tracking-widest text-[#C8A14A] mb-3 block">
             Direct Trade Partnership
           </span>
-          <h2 className="text-3xl sm:text-5xl font-serif font-bold text-white mb-6 leading-tight">
+          <h2 className="text-3xl sm:text-5xl font-sans font-bold text-white mb-6 leading-tight">
             Ready To Import Premium Organic Products?
           </h2>
           <p className="text-base text-green-100 mb-10 font-light leading-relaxed">

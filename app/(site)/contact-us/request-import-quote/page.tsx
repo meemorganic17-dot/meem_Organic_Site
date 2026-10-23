@@ -95,7 +95,7 @@ export default function RequestImportQuotePage() {
         </div>
 
         <div className="text-center mb-10">
-          <h1 className="text-2xl md:text-4xl font-serif font-bold text-stone-900 mb-4">{currentLabels.title}</h1>
+          <h1 className="text-2xl md:text-4xl font-sans font-bold text-stone-900 mb-4">{currentLabels.title}</h1>
           <p className="text-stone-600" dir="auto">{currentLabels.subtitle}</p>
         </div>
 

@@ -100,7 +100,7 @@ export default async function ProductPage({ params }: { params: Promise<{ catego
           {/* Product Gallery Placeholder */}
           <div className="space-y-4">
             <div className="aspect-square bg-stone-200 rounded-2xl overflow-hidden relative">
-              <div className="absolute inset-0 flex items-center justify-center text-stone-400 font-serif text-lg">
+              <div className="absolute inset-0 flex items-center justify-center text-stone-400 font-sans text-lg">
                 Image: {product.name}
               </div>
             </div>
@@ -115,7 +115,7 @@ export default async function ProductPage({ params }: { params: Promise<{ catego
 
           {/* Product Details */}
           <div>
-            <h1 className="text-4xl md:text-5xl font-serif font-bold text-stone-900 mb-4">{product.name}</h1>
+            <h1 className="text-4xl md:text-5xl font-sans font-bold text-stone-900 mb-4">{product.name}</h1>
             
             <div className="flex flex-wrap gap-2 mb-8">
               {product?.sourceCountries?.map((sc: any) => (
@@ -164,7 +164,7 @@ export default async function ProductPage({ params }: { params: Promise<{ catego
         {/* Related Products */}
         {relatedProducts && relatedProducts.length > 0 && (
           <div className="mt-24">
-            <h2 className="text-2xl font-serif font-bold text-stone-900 mb-8">Related Products in {product.category.name}</h2>
+            <h2 className="text-2xl font-sans font-bold text-stone-900 mb-8">Related Products in {product.category.name}</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {relatedProducts.map((rp: any) => (
                 <Link key={rp.id} href={`/import/${product.category.slug}/${rp.slug}`} className="group bg-white rounded-xl shadow-sm border border-stone-200 overflow-hidden hover:shadow-xl transition-all flex flex-col">
@@ -173,7 +173,7 @@ export default async function ProductPage({ params }: { params: Promise<{ catego
                     <div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm">Image: {rp.name}</div>
                   </div>
                   <div className="p-5">
-                    <h3 className="text-lg font-serif font-bold text-stone-900 group-hover:text-primary transition-colors">{rp.name}</h3>
+                    <h3 className="text-lg font-sans font-bold text-stone-900 group-hover:text-primary transition-colors">{rp.name}</h3>
                   </div>
                 </Link>
               ))}

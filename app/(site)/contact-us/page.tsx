@@ -16,7 +16,7 @@ export default function ContactUsPage() {
           <span className="text-xs font-bold uppercase tracking-widest text-[#C8A14A] mb-2 block">
             Direct Trade Communications
           </span>
-          <h1 className="text-4xl md:text-5xl font-serif font-bold text-stone-900 mb-4">
+          <h1 className="text-4xl md:text-5xl font-sans font-bold text-stone-900 mb-4">
             Contact Us
           </h1>
           <p className="text-stone-600 text-base sm:text-lg max-w-2xl mx-auto font-light">
@@ -29,7 +29,7 @@ export default function ContactUsPage() {
             <div className="w-14 h-14 bg-[#14532D]/10 rounded-2xl flex items-center justify-center text-[#14532D] mb-5 group-hover:scale-105 transition-transform">
               📥
             </div>
-            <h3 className="font-serif font-bold text-xl mb-2 text-stone-900">Request Import Quote</h3>
+            <h3 className="font-sans font-bold text-xl mb-2 text-stone-900">Request Import Quote</h3>
             <p className="text-stone-500 text-xs leading-relaxed mb-6">For wholesale buyers seeking container pricing and destination clearance.</p>
             <span className="mt-auto text-[#14532D] font-bold text-xs inline-flex items-center gap-1 group-hover:text-[#C8A14A]">Get Quote &rarr;</span>
           </Link>
@@ -38,7 +38,7 @@ export default function ContactUsPage() {
             <div className="w-14 h-14 bg-[#14532D]/10 rounded-2xl flex items-center justify-center text-[#14532D] mb-5 group-hover:scale-105 transition-transform">
               📤
             </div>
-            <h3 className="font-serif font-bold text-xl mb-2 text-stone-900">Request Export Quote</h3>
+            <h3 className="font-sans font-bold text-xl mb-2 text-stone-900">Request Export Quote</h3>
             <p className="text-stone-500 text-xs leading-relaxed mb-6">For specific destination supply chain inquiries and freight terms.</p>
             <span className="mt-auto text-[#14532D] font-bold text-xs inline-flex items-center gap-1 group-hover:text-[#C8A14A]">Get Quote &rarr;</span>
           </Link>
@@ -47,7 +47,7 @@ export default function ContactUsPage() {
             <div className="w-14 h-14 bg-[#14532D]/10 rounded-2xl flex items-center justify-center text-[#14532D] mb-5 group-hover:scale-105 transition-transform">
               🤝
             </div>
-            <h3 className="font-serif font-bold text-xl mb-2 text-stone-900">Become a Supplier</h3>
+            <h3 className="font-sans font-bold text-xl mb-2 text-stone-900">Become a Supplier</h3>
             <p className="text-stone-500 text-xs leading-relaxed mb-6">For verified farms and producers looking to export to global markets.</p>
             <span className="mt-auto text-[#14532D] font-bold text-xs inline-flex items-center gap-1 group-hover:text-[#C8A14A]">Apply Now &rarr;</span>
           </Link>
@@ -56,7 +56,7 @@ export default function ContactUsPage() {
         <div className="bg-white rounded-3xl shadow-sm border border-stone-200 p-8 md:p-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-2xl font-serif font-bold text-stone-900 mb-6">Global Offices</h2>
+              <h2 className="text-2xl font-sans font-bold text-stone-900 mb-6">Global Offices</h2>
               <div className="space-y-6 text-sm text-stone-600">
                 <div className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-[#C8A14A] shrink-0 mt-0.5" />
@@ -83,7 +83,7 @@ export default function ContactUsPage() {
             </div>
             
             <div>
-              <h2 className="text-2xl font-serif font-bold text-stone-900 mb-4">Send a Message</h2>
+              <h2 className="text-2xl font-sans font-bold text-stone-900 mb-4">Send a Message</h2>
               <p className="text-stone-600 text-xs mb-6">For general questions, our trade desk team is ready to respond.</p>
               <ContactForm />
             </div>

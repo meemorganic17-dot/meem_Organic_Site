@@ -83,7 +83,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
                 <Globe className="w-3.5 h-3.5" /> Global Export Available
               </div>
 
-              <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-6 tracking-tight drop-shadow-lg">
+              <h1 className="font-sans text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-6 tracking-tight drop-shadow-lg">
                 {product.name}
               </h1>
               
@@ -105,7 +105,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
                {/* Decorative card in hero */}
                <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 max-w-sm w-full shadow-2xl relative overflow-hidden group">
                   <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <h3 className="text-white font-serif font-bold text-2xl mb-6 relative z-10">Export Summary</h3>
+                  <h3 className="text-white font-sans font-bold text-2xl mb-6 relative z-10">Export Summary</h3>
                   <div className="space-y-6 relative z-10">
                     <div className="flex justify-between items-center border-b border-white/10 pb-4">
                       <span className="text-gray-400 text-sm">Origin</span>
@@ -148,10 +148,10 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
 
             {/* 3. Product Overview */}
             <section>
-              <h2 className="text-3xl font-serif font-bold text-[#1A1A1A] mb-6 flex items-center gap-3">
+              <h2 className="text-3xl font-sans font-bold text-[#1A1A1A] mb-6 flex items-center gap-3">
                 <FileText className="text-[#C8A14A]" /> Product Overview
               </h2>
-              <div className="prose prose-lg text-gray-600 prose-headings:font-serif prose-headings:text-[#1A1A1A] prose-a:text-[#14532D]">
+              <div className="prose prose-lg text-gray-600 prose-headings:font-sans prose-headings:text-[#1A1A1A] prose-a:text-[#14532D]">
                 <p>
                   Our {product.name} represents the pinnacle of quality from {product.origin}. Cultivated in ideal climates and harvested at peak perfection, this product is highly sought after in international markets for its superior characteristics and extended shelf life.
                 </p>
@@ -163,7 +163,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
 
             {/* 4. Features Section */}
             <section>
-              <h2 className="text-3xl font-serif font-bold text-[#1A1A1A] mb-8">Key Advantages</h2>
+              <h2 className="text-3xl font-sans font-bold text-[#1A1A1A] mb-8">Key Advantages</h2>
               <div className="grid sm:grid-cols-2 gap-6">
                 {[
                   "Premium Grade selection with consistent sizing and coloring.",
@@ -185,7 +185,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
 
             {/* 6. Specifications Table */}
             <section id="specifications" className="scroll-mt-32">
-              <h2 className="text-3xl font-serif font-bold text-[#1A1A1A] mb-8">Technical Specifications</h2>
+              <h2 className="text-3xl font-sans font-bold text-[#1A1A1A] mb-8">Technical Specifications</h2>
               <div className="bg-white border border-gray-100 shadow-lg shadow-gray-200/50 rounded-3xl overflow-hidden">
                 <table className="w-full text-left border-collapse">
                   <tbody>
@@ -220,7 +220,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
             <div className="bg-[#14532D] rounded-3xl p-8 text-white shadow-xl relative overflow-hidden sticky top-24">
               <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10" />
               <div className="relative z-10">
-                <h3 className="font-serif text-2xl font-bold mb-6 flex items-center gap-3">
+                <h3 className="font-sans text-2xl font-bold mb-6 flex items-center gap-3">
                   <Anchor className="text-[#C8A14A]" /> Logistics & Shipping
                 </h3>
                 
@@ -284,7 +284,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
           <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
             <div>
               <h4 className="text-[#C8A14A] font-semibold uppercase tracking-widest text-sm mb-3">More from this category</h4>
-              <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#1A1A1A]">Related Products</h2>
+              <h2 className="text-3xl md:text-4xl font-sans font-bold text-[#1A1A1A]">Related Products</h2>
             </div>
             <Link href={`/products/${categoryId}`} className="text-[#14532D] font-medium hover:text-[#C8A14A] transition-colors flex items-center gap-2">
               View All {categoryData.name} <ArrowRight className="w-4 h-4" />
@@ -309,7 +309,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-lg font-serif font-bold text-[#1A1A1A] group-hover:text-[#14532D] transition-colors mb-2">{p.name}</h3>
+                  <h3 className="text-lg font-sans font-bold text-[#1A1A1A] group-hover:text-[#14532D] transition-colors mb-2">{p.name}</h3>
                   <div className="flex items-center text-sm text-gray-500 mb-4">
                     <Globe className="w-3.5 h-3.5 mr-1" /> Origin: {p.origin}
                   </div>
@@ -331,7 +331,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
             <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-[#C8A14A] rounded-full blur-3xl opacity-20" />
           </div>
           <div className="relative z-10 max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-6 leading-tight">
+            <h2 className="text-3xl md:text-5xl font-sans font-bold text-white mb-6 leading-tight">
               Ready to import <span className="text-[#C8A14A]">{product.name}</span>?
             </h2>
             <p className="text-lg text-gray-300 mb-10 font-light">

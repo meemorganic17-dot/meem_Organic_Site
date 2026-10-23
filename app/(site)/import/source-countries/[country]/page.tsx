@@ -69,7 +69,7 @@ export default async function SourceCountryPage({ params }: { params: Promise<{ 
             <span>/</span>
             <span className="text-white">{country.name}</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4">Sourced from {country.name}</h1>
+          <h1 className="text-4xl md:text-5xl font-sans font-bold mb-4">Sourced from {country.name}</h1>
           <p className="text-lg md:text-xl max-w-2xl text-primary-foreground/90">
             {country.description || `Discover our extensive range of high-quality produce imported directly from ${country.name}.`}
           </p>
@@ -81,7 +81,7 @@ export default async function SourceCountryPage({ params }: { params: Promise<{ 
           {/* Country Info sidebar */}
           <div className="space-y-6">
             <div className="bg-white rounded-xl shadow-sm border border-stone-200 p-6">
-              <h3 className="font-serif font-bold text-xl text-stone-900 mb-4">Origin Information</h3>
+              <h3 className="font-sans font-bold text-xl text-stone-900 mb-4">Origin Information</h3>
               <div className="space-y-4">
                 {country.region && (
                   <div>
@@ -115,13 +115,13 @@ export default async function SourceCountryPage({ params }: { params: Promise<{ 
 
           {/* Products Grid */}
           <div className="lg:col-span-2">
-            <h2 className="text-2xl font-serif font-bold text-stone-900 mb-6">Products from {country.name}</h2>
+            <h2 className="text-2xl font-sans font-bold text-stone-900 mb-6">Products from {country.name}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {country?.products?.map(({ product }: any) => (
                 <Link key={product.id} href={`/import/${product.category.slug}/${product.slug}`} className="group bg-white rounded-xl shadow-sm border border-stone-200 overflow-hidden hover:shadow-xl transition-all flex flex-col h-full">
                   <div className="p-5 flex flex-col flex-1">
                     <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-1">{product.category.name}</div>
-                    <h3 className="text-lg font-serif font-bold text-stone-900 group-hover:text-primary transition-colors mb-2">{product.name}</h3>
+                    <h3 className="text-lg font-sans font-bold text-stone-900 group-hover:text-primary transition-colors mb-2">{product.name}</h3>
                     <div className="mt-auto pt-4 text-primary text-sm font-medium flex items-center">
                       View Details &rarr;
                     </div>

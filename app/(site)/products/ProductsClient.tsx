@@ -46,8 +46,8 @@ export default function ProductsClient({ categories }: { categories: any[] }) {
           </motion.nav>
 
           <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="max-w-3xl mx-auto">
-            <motion.h1 variants={fadeUp} className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6 tracking-tight">
-              Our Export <span className="text-[#C8A14A] italic font-serif">Categories</span>
+            <motion.h1 variants={fadeUp} className="font-sans text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6 tracking-tight">
+              Our Export <span className="text-[#C8A14A] italic font-sans">Categories</span>
             </motion.h1>
             <motion.p variants={fadeUp} className="text-base sm:text-lg text-gray-300 leading-relaxed font-light">
               Discover our comprehensive range of premium agricultural and food products, sourced from the finest farms and processed to global export standards.
@@ -94,7 +94,7 @@ export default function ProductsClient({ categories }: { categories: any[] }) {
                   </div>
                 </div>
 
-                <h2 className="text-2xl sm:text-3xl font-serif font-bold text-white mb-2">
+                <h2 className="text-2xl sm:text-3xl font-sans font-bold text-white mb-2">
                   {cat.name}
                 </h2>
                 
@@ -118,7 +118,7 @@ export default function ProductsClient({ categories }: { categories: any[] }) {
           <span className="text-xs font-bold uppercase tracking-widest text-[#14532D] mb-2 block">
             Complete Product Range
           </span>
-          <h2 className="text-3xl md:text-5xl font-serif font-bold text-gray-900 mb-4">Export Inventory</h2>
+          <h2 className="text-3xl md:text-5xl font-sans font-bold text-gray-900 mb-4">Export Inventory</h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-base font-light">Browse our full catalogue of premium export-grade commodities.</p>
         </div>
         
@@ -147,7 +147,7 @@ export default function ProductsClient({ categories }: { categories: any[] }) {
                     </div>
                   </div>
                   <div className="p-5">
-                    <h3 className="font-serif font-bold text-lg text-gray-900 mb-3 group-hover:text-[#14532D] transition-colors">{product.name}</h3>
+                    <h3 className="font-sans font-bold text-lg text-gray-900 mb-3 group-hover:text-[#14532D] transition-colors">{product.name}</h3>
                     <div className="space-y-1.5 mb-4 text-xs">
                       <div className="flex justify-between">
                         <span className="text-gray-500">Origin:</span>
@@ -176,7 +176,7 @@ export default function ProductsClient({ categories }: { categories: any[] }) {
       <section className="container mx-auto px-6 md:px-12 pb-16">
         <div className="bg-[#14532D] rounded-3xl p-10 sm:p-16 text-center text-white relative overflow-hidden shadow-xl">
           <div className="relative z-10 max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">Need a custom order?</h2>
+            <h2 className="text-3xl md:text-4xl font-sans font-bold mb-4">Need a custom order?</h2>
             <p className="text-sm text-green-100 mb-8 font-light leading-relaxed">
               Don&apos;t see exactly what you&apos;re looking for? We offer custom sourcing and packaging solutions for large-scale international buyers.
             </p>

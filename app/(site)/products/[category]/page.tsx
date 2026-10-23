@@ -143,7 +143,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
               <span className="text-[#C8A14A]">{data.name}</span>
             </nav>
 
-            <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-6 tracking-tight">
+            <h1 className="font-sans text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-6 tracking-tight">
               {data.name}
             </h1>
             <p className="text-lg sm:text-xl text-gray-300 leading-relaxed mb-10 font-light max-w-xl">
@@ -159,7 +159,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-gray-50">
             {data.stats.map((stat, i) => (
               <div key={i} className={i === 0 ? "" : "pl-8"}>
-                <div className="text-3xl md:text-4xl font-serif font-bold text-[#14532D] mb-2">{stat.n}</div>
+                <div className="text-3xl md:text-4xl font-sans font-bold text-[#14532D] mb-2">{stat.n}</div>
                 <div className="text-xs font-semibold uppercase tracking-wider text-gray-500">{stat.l}</div>
               </div>
             ))}
@@ -172,7 +172,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
           <div className="max-w-2xl">
             <h4 className="text-[#C8A14A] font-semibold uppercase tracking-widest text-sm mb-4">Export Catalogue</h4>
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#1A1A1A]">Available Products</h2>
+            <h2 className="text-3xl md:text-4xl font-sans font-bold text-[#1A1A1A]">Available Products</h2>
           </div>
         </div>
 
@@ -197,7 +197,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
                 </div>
               </div>
               <div className="p-6 flex flex-col flex-grow">
-                <h3 className="text-xl font-serif font-bold text-[#1A1A1A] group-hover:text-[#14532D] transition-colors mb-4">{p.name}</h3>
+                <h3 className="text-xl font-sans font-bold text-[#1A1A1A] group-hover:text-[#14532D] transition-colors mb-4">{p.name}</h3>
                 
                 <div className="mt-auto pt-4 border-t border-gray-50 flex justify-end items-center">
                   <div className="w-10 h-10 rounded-full bg-[#14532D]/5 flex items-center justify-center text-[#14532D] group-hover:bg-[#14532D] group-hover:text-white transition-colors cursor-pointer">
@@ -220,7 +220,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
                 <ShieldCheck className="w-6 h-6 text-[#C8A14A]" />
               </div>
               <div>
-                <h4 className="font-serif font-bold text-lg mb-2">Quality Assured</h4>
+                <h4 className="font-sans font-bold text-lg mb-2">Quality Assured</h4>
                 <p className="text-white/80 text-sm leading-relaxed">Every shipment undergoes strict quality control and phytosanitary inspections before departure.</p>
               </div>
             </div>
@@ -229,7 +229,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
                 <Ship className="w-6 h-6 text-[#C8A14A]" />
               </div>
               <div>
-                <h4 className="font-serif font-bold text-lg mb-2">Global Shipping</h4>
+                <h4 className="font-sans font-bold text-lg mb-2">Global Shipping</h4>
                 <p className="text-white/80 text-sm leading-relaxed">Efficient logistics network supporting FOB, CIF, and DDP terms for seamless delivery to your port.</p>
               </div>
             </div>
@@ -238,7 +238,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
                 <Clock className="w-6 h-6 text-[#C8A14A]" />
               </div>
               <div>
-                <h4 className="font-serif font-bold text-lg mb-2">Timely Delivery</h4>
+                <h4 className="font-sans font-bold text-lg mb-2">Timely Delivery</h4>
                 <p className="text-white/80 text-sm leading-relaxed">Optimized cold-chain operations ensure maximum freshness upon arrival at destination.</p>
               </div>
             </div>

@@ -43,8 +43,8 @@ export function ServicesBanner() {
             <span>Professional Export Advisory & Trade Operations</span>
           </motion.div>
 
-          <motion.h1 variants={fadeUp} className="font-serif text-5xl sm:text-6xl font-bold text-white leading-[1.1] mb-6 tracking-tight">
-            Comprehensive <span className="text-[#C8A14A] italic font-serif">Export Services</span>
+          <motion.h1 variants={fadeUp} className="font-sans text-5xl sm:text-6xl font-bold text-white leading-[1.1] mb-6 tracking-tight">
+            Comprehensive <span className="text-[#C8A14A] italic font-sans">Export Services</span>
           </motion.h1>
 
           <motion.p variants={fadeUp} className="text-base sm:text-lg text-gray-300 leading-relaxed mb-8 font-light max-w-xl">
@@ -71,7 +71,7 @@ export function ServicesBanner() {
         >
           <div className="bg-gradient-to-b from-white/10 to-white/5 border border-white/15 rounded-3xl p-6 sm:p-8 backdrop-blur-xl shadow-2xl">
             <span className="text-[11px] uppercase tracking-wider font-bold text-[#C8A14A] block mb-2">Trade Infrastructure</span>
-            <h3 className="text-xl font-serif font-bold text-white mb-6">Service Capabilities</h3>
+            <h3 className="text-xl font-sans font-bold text-white mb-6">Service Capabilities</h3>
 
             <div className="space-y-4">
               <div className="flex items-start gap-4 p-4 rounded-2xl bg-white/5 border border-white/10">

@@ -14,7 +14,7 @@ export function Footer() {
           <div className="space-y-6 lg:pr-8">
             <Link href="/" className="inline-block">
               <div className="flex flex-col">
-                <span className="font-serif text-3xl font-bold tracking-tight text-white">
+                <span className="font-sans text-3xl font-bold tracking-tight text-white">
                   Meeem
                 </span>
                 <span className="text-[10px] uppercase tracking-[0.25em] font-semibold text-[#C8A14A]">
@@ -37,7 +37,7 @@ export function Footer() {
 
           {/* Products Column */}
           <div className="space-y-6">
-            <h4 className="font-serif text-lg font-semibold text-white">Premium Products</h4>
+            <h4 className="font-sans text-lg font-semibold text-white">Premium Products</h4>
             <ul className="space-y-3 text-sm text-gray-400">
               <li><Link href="/products/fresh-fruits" className="hover:text-[#C8A14A] transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3 text-[#C8A14A]"/> Fresh Fruits</Link></li>
               <li><Link href="/products/fresh-vegetables" className="hover:text-[#C8A14A] transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3 text-[#C8A14A]"/> Fresh Vegetables</Link></li>
@@ -50,7 +50,7 @@ export function Footer() {
 
           {/* Company Column */}
           <div className="space-y-6">
-            <h4 className="font-serif text-lg font-semibold text-white">Company</h4>
+            <h4 className="font-sans text-lg font-semibold text-white">Company</h4>
             <ul className="space-y-3 text-sm text-gray-400">
               <li><Link href="/about-us" className="hover:text-[#C8A14A] transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3 text-[#C8A14A]"/> About Us</Link></li>
               <li><Link href="/services" className="hover:text-[#C8A14A] transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3 text-[#C8A14A]"/> Export Services</Link></li>
@@ -63,7 +63,7 @@ export function Footer() {
 
           {/* Contact & Newsletter Column */}
           <div className="space-y-6">
-            <h4 className="font-serif text-lg font-semibold text-white">Global Headquarters</h4>
+            <h4 className="font-sans text-lg font-semibold text-white">Global Headquarters</h4>
             <ul className="space-y-4 text-sm text-gray-400">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-[#C8A14A] shrink-0 mt-0.5" />

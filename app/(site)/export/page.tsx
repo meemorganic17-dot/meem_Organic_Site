@@ -38,7 +38,7 @@ export default async function ExportHubPage() {
           <span className="text-xs font-bold uppercase tracking-widest text-[#C8A14A] mb-2 block">
             Direct Trade Lanes
           </span>
-          <h1 className="text-4xl md:text-5xl font-serif font-bold text-stone-900 mb-4">
+          <h1 className="text-4xl md:text-5xl font-sans font-bold text-stone-900 mb-4">
             Global Export Markets
           </h1>
           <p className="text-stone-600 text-base sm:text-lg max-w-2xl mx-auto font-light">
@@ -57,7 +57,7 @@ export default async function ExportHubPage() {
                 <div className="w-12 h-12 rounded-2xl bg-[#14532D]/10 flex items-center justify-center text-[#14532D] mb-6 group-hover:scale-105 transition-transform">
                   <Globe className="w-6 h-6 text-[#14532D]" />
                 </div>
-                <h2 className="text-2xl font-serif font-bold text-stone-900 group-hover:text-[#14532D] transition-colors mb-2">
+                <h2 className="text-2xl font-sans font-bold text-stone-900 group-hover:text-[#14532D] transition-colors mb-2">
                   {dest.name}
                 </h2>
                 <div className="text-xs text-stone-500 mb-6 font-medium">

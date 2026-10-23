@@ -66,7 +66,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
             <span>/</span>
             <span className="text-white">{category.name}</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4">{category.name}</h1>
+          <h1 className="text-4xl md:text-5xl font-sans font-bold mb-4">{category.name}</h1>
           <p className="text-lg md:text-xl max-w-2xl text-primary-foreground/90">
             {category.description || `Premium wholesale ${category.name.toLowerCase()} sourced globally for international export and trade.`}
           </p>
@@ -82,7 +82,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
                 <div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm">Image: {product.name}</div>
               </div>
               <div className="p-5 flex flex-col flex-1">
-                <h2 className="text-lg font-serif font-bold text-stone-900 group-hover:text-primary transition-colors mb-2">{product.name}</h2>
+                <h2 className="text-lg font-sans font-bold text-stone-900 group-hover:text-primary transition-colors mb-2">{product.name}</h2>
                 <div className="flex flex-wrap gap-1 mt-auto mb-4">
                   {product.sourceCountries?.map((sc: any) => (
                     <span key={sc.sourceCountryId} className="inline-flex items-center rounded-full bg-stone-100 px-2 py-0.5 text-xs font-medium text-stone-600">

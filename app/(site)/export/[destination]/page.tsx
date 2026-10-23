@@ -68,7 +68,7 @@ export default async function ExportDestinationPage({ params }: { params: Promis
             <span>/</span>
             <span className="text-white">{dest.name}</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4">Export to {dest.name}</h1>
+          <h1 className="text-4xl md:text-5xl font-sans font-bold mb-4">Export to {dest.name}</h1>
           <p className="text-lg md:text-xl max-w-2xl text-stone-300">
             Dedicated wholesale supply chains and logistics solutions for {dest.name}.
           </p>
@@ -80,7 +80,7 @@ export default async function ExportDestinationPage({ params }: { params: Promis
           {/* Main content */}
           <div className="lg:col-span-2 space-y-12">
             <section>
-              <h2 className="text-2xl font-serif font-bold text-stone-900 mb-6">Market Overview</h2>
+              <h2 className="text-2xl font-sans font-bold text-stone-900 mb-6">Market Overview</h2>
               <div className="prose prose-stone">
                 <p>
                   Meem Organic World is a trusted supplier for wholesale buyers in {dest.name}. We understand the specific quality standards, packaging requirements, and phytosanitary regulations required for this market.
@@ -92,18 +92,18 @@ export default async function ExportDestinationPage({ params }: { params: Promis
             </section>
 
             <section>
-              <h2 className="text-2xl font-serif font-bold text-stone-900 mb-6">Product Scope for {dest.name}</h2>
+              <h2 className="text-2xl font-sans font-bold text-stone-900 mb-6">Product Scope for {dest.name}</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {linkedCategories.map((cat: any) => (
                   <Link key={cat!.id} href={`/import/${cat!.slug}`} className="p-6 bg-white rounded-xl shadow-sm border border-stone-200 hover:border-primary/50 transition-colors group">
-                    <h3 className="font-bold font-serif text-lg text-stone-900 group-hover:text-primary mb-2">{cat!.name}</h3>
+                    <h3 className="font-bold font-sans text-lg text-stone-900 group-hover:text-primary mb-2">{cat!.name}</h3>
                     <p className="text-sm text-stone-500">Explore full range &rarr;</p>
                   </Link>
                 ))}
                 
                 {linkedProducts.map((prod: any) => (
                   <Link key={prod!.id} href={`/import/placeholder/${prod!.slug}`} className="p-6 bg-white rounded-xl shadow-sm border border-stone-200 hover:border-primary/50 transition-colors group">
-                    <h3 className="font-bold font-serif text-lg text-stone-900 group-hover:text-primary mb-2">{prod!.name}</h3>
+                    <h3 className="font-bold font-sans text-lg text-stone-900 group-hover:text-primary mb-2">{prod!.name}</h3>
                     <p className="text-sm text-stone-500">View product details &rarr;</p>
                   </Link>
                 ))}
@@ -120,7 +120,7 @@ export default async function ExportDestinationPage({ params }: { params: Promis
           {/* Sidebar */}
           <div className="space-y-6">
             <div className="bg-white rounded-xl shadow-sm border border-stone-200 p-6">
-              <h3 className="font-serif font-bold text-xl text-stone-900 mb-4">Logistics & Shipping</h3>
+              <h3 className="font-sans font-bold text-xl text-stone-900 mb-4">Logistics & Shipping</h3>
               <div className="space-y-4 text-sm text-stone-600">
                 <div>
                   <span className="block font-medium text-stone-900 mb-1">Port & Logistics Notes</span>
@@ -130,7 +130,7 @@ export default async function ExportDestinationPage({ params }: { params: Promis
             </div>
 
             <div className="bg-stone-900 text-white rounded-xl p-6 text-center shadow-lg">
-              <h3 className="font-serif font-bold text-xl mb-3">Ready to Order?</h3>
+              <h3 className="font-sans font-bold text-xl mb-3">Ready to Order?</h3>
               <p className="text-stone-300 text-sm mb-6">
                 Get a customized quote for wholesale delivery to {dest.name}.
               </p>

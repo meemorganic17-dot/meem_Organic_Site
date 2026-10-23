@@ -29,7 +29,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
       {/* Sidebar */}
       <aside className="w-64 bg-stone-900 text-stone-300 flex flex-col hidden md:flex h-screen sticky top-0">
         <div className="p-6 border-b border-stone-800">
-          <Link href="/" className="text-white font-serif font-bold text-xl flex items-center gap-2 hover:text-primary transition-colors">
+          <Link href="/" className="text-white font-sans font-bold text-xl flex items-center gap-2 hover:text-primary transition-colors">
             <ArrowLeft size={16} /> Meem Admin
           </Link>
         </div>

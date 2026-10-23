@@ -74,7 +74,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ post:
               {post.category.name}
             </Link>
           )}
-          <h1 className="text-3xl md:text-5xl font-serif font-bold text-stone-900 mb-6 leading-tight">{post.title}</h1>
+          <h1 className="text-3xl md:text-5xl font-sans font-bold text-stone-900 mb-6 leading-tight">{post.title}</h1>
           <div className="flex items-center justify-center text-sm text-stone-500 gap-4">
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 rounded-full bg-stone-200 flex items-center justify-center font-bold text-stone-600">
