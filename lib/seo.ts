@@ -7,14 +7,14 @@ type DefaultMetadata = {
 };
 
 const DEFAULT_SEO: DefaultMetadata = {
-  title: 'Meem Organic World | Premium International Trade Portal',
-  description: 'Wholesale importer and exporter of premium fresh fruits, vegetables, dry fruits, nuts, and more from global origins.',
+  title: 'MEEM Organic Export | Global Agricultural Trade & Commodities',
+  description: 'International supplier and exporter of certified organic fresh fruits, vegetables, 1121 Kainat basmati rice, Himalayan pink salt, and grains directly from verified growers.',
 };
 
 export function constructMetadata({
   title = DEFAULT_SEO.title,
   description = DEFAULT_SEO.description,
-  image = '/logo.png',
+  image = '/images/unsplash-1542838132-92c53300491e.webp',
   noIndex = false,
 }: {
   title?: string;
@@ -39,7 +39,7 @@ export function constructMetadata({
       title,
       description,
       images: [image],
-      creator: '@meemorganicworld',
+      creator: '@meemorganic',
     },
     metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'),
     ...(noIndex && {

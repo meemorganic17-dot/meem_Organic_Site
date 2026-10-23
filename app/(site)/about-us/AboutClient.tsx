@@ -6,7 +6,7 @@ import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { 
   ArrowRight, ShieldCheck, Globe, Leaf, Target, 
-  Award, Sprout, Handshake, Users, CheckCircle2, Clock
+  Award, Sprout, Handshake, Users, CheckCircle2, Clock, ChevronRight
 } from "lucide-react";
 
 const fadeUp: any = {
@@ -21,7 +21,7 @@ const staggerContainer: any = {
 
 export default function AboutClient() {
   return (
-    <div className="flex flex-col min-h-screen bg-[#F8FAF8] overflow-x-hidden selection:bg-[#14532D] selection:text-white">
+    <div className="flex flex-col min-h-screen bg-[#FAF8F5] overflow-x-hidden selection:bg-[#1E2E21] selection:text-white">
       <HeroSection />
       <StatsSection />
       <OurStorySection />
@@ -35,98 +35,86 @@ export default function AboutClient() {
 function HeroSection() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
-  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
+  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0.2]);
 
   return (
-    <section ref={ref} className="relative min-h-[100svh] flex items-center justify-center overflow-hidden bg-[#0A1A11]">
+    <section ref={ref} className="relative min-h-[85svh] flex items-center justify-center overflow-hidden bg-[#111A13] pt-24 pb-16">
       <motion.div style={{ y, opacity }} className="absolute inset-0 z-0">
         <Image
           src="/images/unsplash-1500382017468-9049fed747ef.webp"
           alt="Agriculture Fields"
           fill
           priority
-          className="object-cover opacity-60 mix-blend-luminosity"
+          className="object-cover opacity-25"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0A1A11]/90 via-[#0A1A11]/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#111A13] via-[#111A13]/85 to-transparent" />
+        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-[#C26D38]/15 blur-[140px] rounded-full pointer-events-none" />
       </motion.div>
 
-      <div className="container mx-auto px-6 md:px-12 relative z-10 grid lg:grid-cols-2 gap-12 pt-20">
+      <div className="container mx-auto px-6 md:px-12 relative z-10 grid lg:grid-cols-12 gap-12 items-center">
         <motion.div 
           initial="hidden" animate="visible" variants={staggerContainer}
-          className="flex flex-col justify-center max-w-2xl"
+          className="lg:col-span-7 flex flex-col justify-center max-w-2xl"
         >
-          <motion.div variants={fadeUp} className="flex flex-wrap gap-3 mb-8">
-            {['Global Footprint', 'Ethical Trading', 'Trusted Partners', 'Quality Assured'].map((badge, i) => (
-              <span key={i} className="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-md px-4 py-1.5 text-xs font-medium text-white shadow-sm">
-                <CheckCircle2 className="w-3.5 h-3.5 text-[#C8A14A]" />
-                {badge}
-              </span>
-            ))}
+          <motion.div variants={fadeUp} className="inline-flex items-center gap-2 rounded-full border border-[#C26D38]/30 bg-[#C26D38]/10 backdrop-blur-md px-4 py-1.5 text-xs font-semibold text-[#E6DFD5] w-fit mb-6 shadow-sm">
+            <span className="w-2 h-2 rounded-full bg-[#C26D38] animate-pulse"></span>
+            <span>Origin Integrity & Global Trade Leadership</span>
           </motion.div>
 
-          <motion.h1 variants={fadeUp} className="font-serif text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-6 tracking-tight">
+          <motion.h1 variants={fadeUp} className="font-serif text-5xl sm:text-6xl font-bold text-white leading-[1.1] mb-6 tracking-tight">
             Cultivating Excellence, <br />
-            <span className="text-[#C8A14A] italic">Exporting Trust.</span>
+            <span className="text-[#C26D38] italic font-serif">Exporting Trust.</span>
           </motion.h1>
 
-          <motion.p variants={fadeUp} className="text-lg sm:text-xl text-gray-300 leading-relaxed mb-10 font-light max-w-xl">
-            Meeem Organic World was founded on a simple yet profound belief: that the world deserves access to the purest, highest-quality agricultural products nature has to offer.
+          <motion.p variants={fadeUp} className="text-base sm:text-lg text-[#A3B0A6] leading-relaxed mb-8 font-light max-w-xl">
+            Established on the core conviction that international commodity buyers deserve unadulterated origin agricultural products, direct farm gate pricing, and zero compromise on phytosanitary benchmarks.
           </motion.p>
 
-          <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-5">
-            <Link href="#our-story" className="inline-flex items-center justify-center rounded-full bg-[#C8A14A] px-8 py-4 text-base font-semibold text-white shadow-[0_8px_30px_rgba(200,161,74,0.3)] hover:bg-[#b08d3f] hover:-translate-y-1 transition-all duration-300">
-              Read Our Story
+          <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4">
+            <Link 
+              href="#our-story" 
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-[#C26D38] px-8 py-3.5 text-sm font-semibold text-white shadow-[0_8px_25px_rgba(194,109,56,0.3)] hover:bg-[#A8582B] transition-all duration-300"
+            >
+              Our Company Journey
+              <ChevronRight className="w-4 h-4" />
             </Link>
-            <Link href="/contact-us" className="inline-flex items-center justify-center rounded-full border border-white/30 bg-white/5 backdrop-blur-md px-8 py-4 text-base font-semibold text-white hover:bg-white hover:text-[#14532D] hover:-translate-y-1 transition-all duration-300">
-              Contact Leadership
+            <Link 
+              href="/contact-us" 
+              className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 backdrop-blur-md px-8 py-3.5 text-sm font-semibold text-white hover:bg-white hover:text-[#111A13] transition-all duration-300"
+            >
+              Contact Executive Desk
             </Link>
           </motion.div>
         </motion.div>
 
-        {/* Floating Cards Right Side */}
-        <div className="hidden lg:flex relative h-[600px] items-center justify-center">
-          <div className="absolute inset-0 bg-[url('/images/wiki-World_map_-_low_resolution.svg')] bg-no-repeat bg-center bg-contain opacity-60 filter invert" />
-          
-          <motion.div 
-            initial={{ opacity: 0, y: 50, rotate: -5 }}
-            animate={{ opacity: 1, y: 0, rotate: 0 }}
-            transition={{ duration: 1, delay: 0.4 }}
-            className="absolute top-[10%] left-[10%] w-48 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 p-4 shadow-2xl"
-          >
-            <div className="relative h-32 w-full rounded-xl overflow-hidden mb-3">
-              <Image src="/images/unsplash-1494412574643-ff11b0a5c1c3.webp" alt="Global Logistics" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
-            </div>
-            <div className="text-white font-serif font-medium">Global Logistics</div>
-            <div className="text-gray-400 text-xs mt-1">35+ Countries Served</div>
-          </motion.div>
+        {/* Structured Credentials Card (No tilted cards) */}
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="lg:col-span-5"
+        >
+          <div className="bg-gradient-to-b from-white/10 to-white/5 border border-white/15 rounded-3xl p-6 sm:p-8 backdrop-blur-xl shadow-2xl">
+            <span className="text-[11px] uppercase tracking-wider font-bold text-[#C26D38] block mb-2">Trade Footprint</span>
+            <h3 className="text-2xl font-serif font-bold text-white mb-6">Audited Farm Partnerships</h3>
 
-          <motion.div 
-            initial={{ opacity: 0, x: 50, rotate: 5 }}
-            animate={{ opacity: 1, x: 0, rotate: 0 }}
-            transition={{ duration: 1, delay: 0.6 }}
-            className="absolute top-[40%] right-[5%] w-56 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 p-4 shadow-2xl z-20"
-          >
-            <div className="relative h-36 w-full rounded-xl overflow-hidden mb-3">
-              <Image src="/images/unsplash-1581091226825-a6a2a5aee158.webp" alt="Quality Assured" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
+            <div className="grid grid-cols-2 gap-4 mb-6">
+              <div className="p-4 rounded-2xl bg-white/5 border border-white/10">
+                <div className="text-2xl font-serif font-bold text-[#C26D38]">35+</div>
+                <div className="text-xs text-[#A3B0A6] mt-1">Export Markets</div>
+              </div>
+              <div className="p-4 rounded-2xl bg-white/5 border border-white/10">
+                <div className="text-2xl font-serif font-bold text-white">500+</div>
+                <div className="text-xs text-[#A3B0A6] mt-1">Grower Partners</div>
+              </div>
             </div>
-            <div className="text-white font-serif font-medium">Lab Tested</div>
-            <div className="text-[#C8A14A] text-xs mt-1 font-semibold flex items-center gap-1"><ShieldCheck className="w-3 h-3"/> 100% Verified</div>
-          </motion.div>
 
-          <motion.div 
-            initial={{ opacity: 0, y: -50, rotate: -2 }}
-            animate={{ opacity: 1, y: 0, rotate: 0 }}
-            transition={{ duration: 1, delay: 0.8 }}
-            className="absolute bottom-[10%] left-[20%] w-52 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 p-4 shadow-2xl z-10"
-          >
-            <div className="relative h-28 w-full rounded-xl overflow-hidden mb-3">
-              <Image src="/images/unsplash-1595841696677-6489ff3f8cd1.webp" alt="Partner Farms" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
-            </div>
-            <div className="text-white font-serif font-medium">Partner Farms</div>
-            <div className="text-gray-400 text-xs mt-1">Sustainable Sourcing</div>
-          </motion.div>
-        </div>
+            <p className="text-xs text-[#A3B0A6] leading-relaxed">
+              Operating temperature-controlled pack-houses, optical grading lines, and electronic customs interfaces across major export corridors.
+            </p>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
@@ -134,16 +122,16 @@ function HeroSection() {
 
 function StatsSection() {
   const stats = [
-    { num: "15+", label: "Years in Trade", icon: Clock },
-    { num: "35+", label: "Countries Served", icon: Globe },
-    { num: "500+", label: "Partner Farms", icon: Leaf },
-    { num: "100%", label: "Quality Compliant", icon: ShieldCheck }
+    { num: "15+", label: "Years in Commodity Trade", icon: Clock },
+    { num: "35+", label: "International Ports", icon: Globe },
+    { num: "500+", label: "Verified Partner Farms", icon: Leaf },
+    { num: "100%", label: "Batch Traceability", icon: ShieldCheck }
   ];
 
   return (
-    <section className="py-12 bg-[#F8FAF8] relative z-20">
+    <section className="py-12 bg-[#EDE8E1]/40 border-b border-[#E6DFD5] relative z-20">
       <div className="container mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {stats.map((stat, i) => (
             <motion.div 
               key={i}
@@ -151,13 +139,13 @@ function StatsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="bg-white rounded-3xl p-8 text-center shadow-xl shadow-gray-200/50 border border-gray-100 hover:-translate-y-2 transition-transform duration-300"
+              className="bg-white rounded-2xl p-6 text-center shadow-xs border border-[#E6DFD5]"
             >
-              <div className="w-16 h-16 mx-auto bg-[#14532D]/5 rounded-2xl flex items-center justify-center mb-6">
-                <stat.icon className="w-8 h-8 text-[#14532D]" />
+              <div className="w-12 h-12 mx-auto bg-[#1E2E21]/5 rounded-xl flex items-center justify-center mb-4">
+                <stat.icon className="w-6 h-6 text-[#1E2E21]" />
               </div>
-              <h3 className="text-4xl font-serif font-bold text-[#1A1A1A] mb-2">{stat.num}</h3>
-              <p className="text-sm font-semibold text-gray-500 uppercase tracking-widest">{stat.label}</p>
+              <h3 className="text-3xl font-serif font-bold text-[#1C1917] mb-1">{stat.num}</h3>
+              <p className="text-xs font-semibold text-[#736E68] uppercase tracking-wider">{stat.label}</p>
             </motion.div>
           ))}
         </div>
@@ -168,59 +156,37 @@ function StatsSection() {
 
 function OurStorySection() {
   return (
-    <section className="py-24 bg-white overflow-hidden">
+    <section id="our-story" className="py-24 md:py-32 bg-[#FAF8F5] overflow-hidden">
       <div className="container mx-auto px-6 md:px-12">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <motion.div 
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="space-y-8"
-          >
-            <h4 className="text-[#C8A14A] font-semibold uppercase tracking-widest text-sm">The Journey</h4>
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#1A1A1A] leading-tight">
-              From Local Fields to <br /> Global Markets.
+        <div className="grid lg:grid-cols-12 gap-16 items-center">
+          <div className="lg:col-span-6 space-y-6">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#C26D38] block">
+              Origin Narrative
+            </span>
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#1C1917] leading-tight">
+              Bridging Fertile River Basins to Global Supermarkets
             </h2>
-            <div className="prose prose-lg text-gray-600">
+            <div className="space-y-4 text-[#736E68] text-base font-light leading-relaxed">
               <p>
-                What started as a modest endeavor to connect local farmers with regional buyers has blossomed into a globally recognized export house. We recognized early on that the rich, fertile soils of our region produced agricultural goods of unparalleled quality, yet the global market was largely inaccessible to these local growers.
+                Our organization was built to overcome the systematic inefficiencies that have long hindered direct agricultural export. By bringing cold storage infrastructure and scientific post-harvest grading directly to orchard gates, we preserve harvest freshness through long ocean voyages.
               </p>
               <p>
-                By establishing state-of-the-art processing facilities, securing international certifications, and building a flawless cold-chain logistics network, Meeem Organic World has successfully bridged this gap. 
-              </p>
-              <p className="font-medium text-[#14532D]">
-                Today, we stand as a beacon of reliability in international trade, exporting thousands of metric tons of premium organic produce annually to over 35 countries.
+                We handle the complete export spectrum: certified field audits, phytosanitary treatment, export packaging, marine insurance, and customs clearance under internationally binding trade contracts.
               </p>
             </div>
-          </motion.div>
+          </div>
           
-          <motion.div 
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="relative"
-          >
-            {/* Different image arrangement than home page */}
-            <div className="grid grid-cols-2 gap-4 h-[600px]">
-              <div className="space-y-4 pt-12">
-                <div className="relative h-[280px] rounded-3xl overflow-hidden shadow-lg">
-                  <Image src="/images/unsplash-1598170845058-32b9d6a5da37.webp" alt="Organic Products" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover hover:scale-110 transition-transform duration-700" />
-                </div>
-                <div className="relative h-[240px] rounded-3xl overflow-hidden shadow-lg">
-                  <Image src="/images/unsplash-1494412574643-ff11b0a5c1c3.webp" alt="Cargo and Containers" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover hover:scale-110 transition-transform duration-700" />
-                </div>
-              </div>
-              <div className="space-y-4">
-                <div className="relative h-[340px] rounded-3xl overflow-hidden shadow-lg">
-                  <Image src="/images/unsplash-1601584115197-04ecc0da31d7.webp" alt="Global Shipping and Ports" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover hover:scale-110 transition-transform duration-700" />
-                </div>
-                <div className="relative h-[200px] bg-[#14532D] rounded-3xl overflow-hidden shadow-lg p-8 text-white flex flex-col justify-center">
-                  <Award className="w-10 h-10 text-[#C8A14A] mb-4" />
-                  <h3 className="font-serif text-2xl font-bold">Award Winning Exporter</h3>
-                </div>
-              </div>
+          <div className="lg:col-span-6 relative">
+            <div className="relative h-[440px] rounded-3xl overflow-hidden shadow-xl border border-[#E6DFD5]">
+              <Image 
+                src="/images/unsplash-1598170845058-32b9d6a5da37.webp" 
+                alt="Agricultural Harvest" 
+                fill 
+                sizes="(max-width: 1024px) 100vw, 50vw" 
+                className="object-cover" 
+              />
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
@@ -229,44 +195,28 @@ function OurStorySection() {
 
 function MissionVisionSection() {
   return (
-    <section className="py-24 bg-[#0A1A11] text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-[url('/images/unsplash-1605000797499-95a51c5269ae.webp')] opacity-10 bg-cover bg-fixed bg-center" />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0A1A11] via-[#0A1A11]/80 to-[#0A1A11]" />
-      
+    <section className="py-24 bg-[#111A13] text-white relative overflow-hidden border-y border-[#283A2C]">
       <div className="container mx-auto px-6 md:px-12 relative z-10">
-        <div className="grid md:grid-cols-2 gap-12">
-          {/* Mission */}
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="bg-white/5 backdrop-blur-xl border border-white/10 p-10 lg:p-14 rounded-[2.5rem] hover:bg-white/10 transition-colors"
-          >
-            <div className="w-16 h-16 bg-[#C8A14A] rounded-2xl flex items-center justify-center mb-8 shadow-[0_0_30px_rgba(200,161,74,0.4)]">
-              <Target className="w-8 h-8 text-white" />
+        <div className="grid md:grid-cols-2 gap-10">
+          <div className="bg-white/5 border border-white/10 p-8 sm:p-12 rounded-3xl backdrop-blur-md">
+            <div className="w-12 h-12 bg-[#C26D38] rounded-xl flex items-center justify-center mb-6 text-white shadow-md">
+              <Target className="w-6 h-6" />
             </div>
-            <h3 className="text-3xl font-serif font-bold mb-6">Our Mission</h3>
-            <p className="text-lg text-gray-300 leading-relaxed font-light">
-              To seamlessly connect the world with nature&apos;s finest agricultural produce through a sustainable, transparent, and highly efficient global supply chain. We strive to empower local farmers while ensuring our international clients receive uncompromised quality, consistently and reliably.
+            <h3 className="text-2xl font-serif font-bold mb-4">Our Mission</h3>
+            <p className="text-sm sm:text-base text-[#A3B0A6] leading-relaxed font-light">
+              To supply international commodity markets with pristine, certified agricultural goods through transparent grower pricing, zero-chemical protocols, and precision cold-chain transit.
             </p>
-          </motion.div>
+          </div>
 
-          {/* Vision */}
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="bg-white/5 backdrop-blur-xl border border-white/10 p-10 lg:p-14 rounded-[2.5rem] hover:bg-white/10 transition-colors"
-          >
-            <div className="w-16 h-16 bg-[#14532D] rounded-2xl flex items-center justify-center mb-8 shadow-[0_0_30px_rgba(20,83,45,0.4)]">
-              <Globe className="w-8 h-8 text-white" />
+          <div className="bg-white/5 border border-white/10 p-8 sm:p-12 rounded-3xl backdrop-blur-md">
+            <div className="w-12 h-12 bg-[#1E2E21] rounded-xl flex items-center justify-center mb-6 text-white border border-[#C26D38]/40 shadow-md">
+              <Globe className="w-6 h-6 text-[#C26D38]" />
             </div>
-            <h3 className="text-3xl font-serif font-bold mb-6">Our Vision</h3>
-            <p className="text-lg text-gray-300 leading-relaxed font-light">
-              To be the globally recognized benchmark for excellence in the organic food export industry. We envision a future where Meeem Organic World is synonymous with unparalleled quality, ethical trading practices, and environmental stewardship across every continent.
+            <h3 className="text-2xl font-serif font-bold mb-4">Our Vision</h3>
+            <p className="text-sm sm:text-base text-[#A3B0A6] leading-relaxed font-light">
+              To establish a benchmark for institutional agricultural trade where commercial importers rely with total confidence on origin quality, transparent weight measurements, and scheduled port arrivals.
             </p>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
@@ -275,34 +225,27 @@ function MissionVisionSection() {
 
 function ValuesSection() {
   const values = [
-    { title: "Integrity", icon: Handshake, desc: "Transparent practices in every transaction, fostering long-term trust with global partners." },
-    { title: "Quality Above All", icon: ShieldCheck, desc: "A zero-tolerance policy for subpar products, ensured through rigorous testing." },
-    { title: "Sustainability", icon: Leaf, desc: "Championing eco-friendly farming and optimized, low-emission logistics." },
-    { title: "People First", icon: Users, desc: "From farm workers to end consumers, human welfare remains at our core." }
+    { title: "Contractual Integrity", icon: Handshake, desc: "Reliable execution under standardized Incoterms with zero compromise on agreed specifications." },
+    { title: "Grading Precision", icon: ShieldCheck, desc: "Strict optical and manual grading ensuring uniform sizing, brix levels, and zero blemish tolerance." },
+    { title: "Eco Stewardship", icon: Leaf, desc: "Promoting chemical-free pest deterrents, soil enrichment, and water-conserving drip irrigation." },
+    { title: "Producer Welfare", icon: Users, desc: "Direct farm-gate transactions ensuring sustainable compensation for rural grower families." }
   ];
 
   return (
-    <section className="py-24 md:py-32 bg-[#F8FAF8]">
+    <section className="py-24 md:py-32 bg-[#FAF8F5]">
       <div className="container mx-auto px-6 md:px-12 text-center">
-        <h4 className="text-[#C8A14A] font-semibold uppercase tracking-widest text-sm mb-4">Core Principles</h4>
-        <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#1A1A1A] mb-16">Values That Drive Us</h2>
+        <span className="text-xs font-bold uppercase tracking-widest text-[#C26D38] mb-2 block">Core Principles</span>
+        <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#1C1917] mb-16">Values Guiding Our Trade Desk</h2>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {values.map((v, i) => (
-            <motion.div 
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl hover:shadow-[#14532D]/5 transition-all duration-300"
-            >
-              <div className="w-14 h-14 mx-auto rounded-full bg-gray-50 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <v.icon className="w-7 h-7 text-[#14532D]" />
+            <div key={i} className="bg-white p-7 rounded-2xl border border-[#E6DFD5] shadow-xs text-left">
+              <div className="w-12 h-12 rounded-xl bg-[#1E2E21]/5 flex items-center justify-center mb-5 text-[#1E2E21]">
+                <v.icon className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold text-[#1A1A1A] mb-4">{v.title}</h3>
-              <p className="text-gray-600 leading-relaxed text-sm">{v.desc}</p>
-            </motion.div>
+              <h3 className="text-lg font-serif font-bold text-[#1C1917] mb-2">{v.title}</h3>
+              <p className="text-xs text-[#736E68] leading-relaxed font-light">{v.desc}</p>
+            </div>
           ))}
         </div>
       </div>
@@ -312,27 +255,18 @@ function ValuesSection() {
 
 function CTABanner() {
   return (
-    <section className="py-20 relative z-20">
-      <div className="container mx-auto px-6 md:px-12">
-        <div className="bg-[#14532D] rounded-[3rem] overflow-hidden relative shadow-2xl">
-          <div className="absolute inset-0 z-0">
-            <Image src="/images/unsplash-1542838132-92c53300491e.webp" alt="Export background" fill className="object-cover opacity-20 mix-blend-overlay" />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#14532D] via-[#14532D]/90 to-[#14532D]/60" />
-          </div>
-          
-          <div className="relative z-10 p-12 md:p-20 text-center lg:text-left flex flex-col lg:flex-row items-center justify-between gap-10">
-            <div className="max-w-2xl">
-              <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-6">Ready to start importing premium goods?</h2>
-              <p className="text-lg text-green-100 font-light">Join hundreds of international buyers who trust Meeem Organic World for their wholesale supply needs.</p>
-            </div>
-            <div className="flex-shrink-0 flex flex-col sm:flex-row gap-4 w-full lg:w-auto">
-              <Link href="/contact-us/request-import-quote" className="px-8 py-4 rounded-full bg-[#C8A14A] text-white font-bold text-center hover:bg-[#B08D3F] transition-colors shadow-lg">
-                Request a Quote
-              </Link>
-              <Link href="/products" className="px-8 py-4 rounded-full bg-white/10 text-white font-bold text-center border border-white/20 hover:bg-white hover:text-[#14532D] transition-colors backdrop-blur-sm">
-                View Catalogue
-              </Link>
-            </div>
+    <section className="py-20 px-6 md:px-12 bg-white">
+      <div className="container mx-auto max-w-5xl rounded-3xl bg-[#111A13] border border-[#283A2C] p-10 sm:p-16 text-center text-white relative overflow-hidden">
+        <div className="relative z-10 max-w-2xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl font-serif font-bold mb-4">Partner with Our Export Desk</h2>
+          <p className="text-sm text-[#A3B0A6] mb-8 font-light">Direct container bookings, wholesale commodities, and customized export packaging.</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/contact-us/request-import-quote" className="rounded-full bg-[#C26D38] px-8 py-3.5 text-sm font-semibold hover:bg-[#A8582B] transition-colors">
+              Request Sourcing Quote
+            </Link>
+            <Link href="/products" className="rounded-full border border-white/20 px-8 py-3.5 text-sm font-semibold hover:bg-white hover:text-[#111A13] transition-colors">
+              View Product Inventory
+            </Link>
           </div>
         </div>
       </div>
