@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
@@ -48,14 +49,14 @@ export function Header({ isAdmin = false, adminName = 'Admin' }: { isAdmin?: boo
       href: "/products",
       megaMenu: [
         { name: "Fresh Fruits", href: "/products/fresh-fruits", description: "Seasonal orchard-fresh fruits", icon: Leaf },
-        { name: "Fresh Vegetables", href: "/products/fresh-vegetables", description: "Farm-fresh certified produce", icon: Carrot },
-        { name: "Dry Fruits & Nuts", href: "/products/dry-fruits", description: "Sun-dried organic nuts and fruits", icon: ShoppingBasket },
+        { name: "Fresh Vegetables", href: "/products/fresh-vegetables", description: "Farm-fresh daily vegetables", icon: Carrot },
+        { name: "Dry Fruits & Nuts", href: "/products/dry-fruits", description: "High-grade organic nuts and fruits", icon: ShoppingBasket },
         { name: "Grains & Staples", href: "/products/grains", description: "Export grade long-grain basmati", icon: Wheat },
-        { name: "Poultry Products", href: "/products/poultry", description: "Temperature-monitored poultry", icon: ShoppingBag },
+        { name: "Poultry Products", href: "/products/poultry", description: "Fresh and frozen poultry items", icon: ShoppingBag },
       ]
     },
     { name: "Services", href: "/services" },
-    { name: "Insights", href: "/blog" },
+    { name: "Blogs", href: "/blog" },
     { name: "Contact", href: "/contact-us" },
   ];
 
@@ -65,28 +66,27 @@ export function Header({ isAdmin = false, adminName = 'Admin' }: { isAdmin?: boo
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
         headerTransparent
-          ? "bg-transparent py-4"
-          : "bg-[#FAF8F5]/90 backdrop-blur-xl shadow-[0_8px_30px_rgba(30,46,33,0.06)] py-3 border-b border-[#E6DFD5]/70"
+          ? "bg-transparent py-3"
+          : "bg-white/85 backdrop-blur-xl shadow-[0_4px_30px_rgba(0,0,0,0.03)] py-2 border-b border-gray-100/60"
       }`}
     >
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
-        {/* Brand Identity / Logo */}
-        <Link href="/" className="flex items-center gap-3 z-50 group">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#1E2E21] to-[#2E4733] flex items-center justify-center text-white shadow-md shadow-[#1E2E21]/20 group-hover:scale-105 transition-transform duration-300 border border-[#C26D38]/30">
-            <Leaf className="w-5 h-5 text-[#C26D38]" />
-          </div>
-          <div className="flex flex-col">
-            <span className={`font-serif text-xl font-bold tracking-tight leading-none ${headerTransparent ? "text-white" : "text-[#1E2E21]"}`}>
-              MEEM
-            </span>
-            <span className="text-[10px] uppercase tracking-[0.28em] font-semibold text-[#C26D38] mt-1">
-              Organic Export
-            </span>
+        {/* Original Circular Logo */}
+        <Link href="/" className="flex items-center z-50 group">
+          <div className={`relative w-12 h-12 lg:w-14 lg:h-14 overflow-hidden rounded-full shadow-md transition-transform duration-300 group-hover:scale-105 border-2 bg-[#C8A14A]/10 ${headerTransparent ? "border-white/20" : "border-[#14532D]/10"}`}>
+            <Image 
+              src="/images/logo.webp" 
+              alt="Meeem Organic World Logo" 
+              fill 
+              priority
+              sizes="(max-width: 768px) 3rem, 3.5rem"
+              className="object-contain" 
+            />
           </div>
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-7 h-full">
+        <nav className="hidden lg:flex items-center gap-8 h-full">
           {navLinks.map((link) => (
             <div 
               key={link.name}
@@ -96,15 +96,15 @@ export function Header({ isAdmin = false, adminName = 'Admin' }: { isAdmin?: boo
             >
               <Link
                 href={link.href}
-                className={`text-sm font-medium tracking-wide transition-colors hover:text-[#C26D38] relative group/link flex items-center gap-1.5 py-4 ${
-                  headerTransparent ? "text-white/90" : "text-[#1C1917]"
+                className={`text-sm font-medium tracking-wide transition-colors hover:text-[#C8A14A] relative group/link flex items-center gap-1.5 py-4 ${
+                  headerTransparent ? "text-white/90" : "text-[#1A1A1A]"
                 }`}
               >
                 {link.name}
                 {link.megaMenu && (
                   <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${activeDropdown === link.name ? "rotate-180" : ""}`} />
                 )}
-                <span className="absolute bottom-2.5 left-0 w-0 h-0.5 bg-[#C26D38] transition-all duration-300 group-hover/link:w-full rounded-full"></span>
+                <span className="absolute bottom-2.5 left-0 w-0 h-0.5 bg-[#C8A14A] transition-all duration-300 group-hover/link:w-full rounded-full"></span>
               </Link>
 
               {link.megaMenu && (
@@ -115,12 +115,12 @@ export function Header({ isAdmin = false, adminName = 'Admin' }: { isAdmin?: boo
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 12 }}
                       transition={{ duration: 0.2, ease: "easeOut" }}
-                      className="absolute top-[calc(100%-4px)] left-1/2 -translate-x-1/2 w-[500px] bg-[#FAF8F5] rounded-2xl shadow-[0_24px_50px_rgba(30,46,33,0.12)] border border-[#E6DFD5] overflow-hidden"
+                      className="absolute top-[calc(100%-4px)] left-1/2 -translate-x-1/2 w-[500px] bg-white rounded-2xl shadow-[0_24px_50px_rgba(0,0,0,0.1)] border border-gray-100 overflow-hidden"
                     >
                       <div className="p-6">
-                        <div className="flex items-center justify-between mb-4 pb-2 border-b border-[#E6DFD5]">
-                          <span className="text-xs font-bold text-[#736E68] uppercase tracking-wider flex items-center gap-1.5">
-                            <Sparkles className="w-3.5 h-3.5 text-[#C26D38]" /> Verified Agro Portfolios
+                        <div className="flex items-center justify-between mb-4 pb-2 border-b border-gray-100">
+                          <span className="text-xs font-bold text-gray-400 uppercase tracking-wider flex items-center gap-1.5">
+                            <Sparkles className="w-3.5 h-3.5 text-[#C8A14A]" /> Product Categories
                           </span>
                         </div>
                         <div className="grid grid-cols-2 gap-3">
@@ -131,16 +131,16 @@ export function Header({ isAdmin = false, adminName = 'Admin' }: { isAdmin?: boo
                                 key={item.name}
                                 href={item.href}
                                 onClick={() => setActiveDropdown(null)}
-                                className="group/item flex items-start gap-3 p-3 rounded-xl hover:bg-white hover:shadow-sm border border-transparent hover:border-[#E6DFD5] transition-all duration-200"
+                                className="group/item flex items-start gap-3 p-3 rounded-xl hover:bg-[#14532D]/5 border border-transparent hover:border-gray-100 transition-all duration-200"
                               >
-                                <div className="mt-0.5 w-8 h-8 rounded-lg bg-[#C26D38]/10 text-[#C26D38] flex items-center justify-center group-hover/item:bg-[#C26D38] group-hover/item:text-white transition-colors duration-200 shrink-0">
+                                <div className="mt-0.5 w-8 h-8 rounded-lg bg-[#C8A14A]/10 text-[#C8A14A] flex items-center justify-center group-hover/item:bg-[#C8A14A] group-hover/item:text-white transition-colors duration-200 shrink-0">
                                   <Icon className="w-4 h-4" />
                                 </div>
                                 <div>
-                                  <div className="text-sm font-semibold text-[#1C1917] group-hover/item:text-[#1E2E21] transition-colors">
+                                  <div className="text-sm font-semibold text-gray-900 group-hover/item:text-[#14532D] transition-colors">
                                     {item.name}
                                   </div>
-                                  <div className="text-xs text-[#736E68] mt-0.5 leading-tight">
+                                  <div className="text-xs text-gray-500 mt-0.5 leading-tight">
                                     {item.description}
                                   </div>
                                 </div>
@@ -149,14 +149,14 @@ export function Header({ isAdmin = false, adminName = 'Admin' }: { isAdmin?: boo
                           })}
                         </div>
                       </div>
-                      <div className="bg-[#EDE8E1]/60 px-6 py-3 border-t border-[#E6DFD5] flex justify-between items-center text-xs">
-                        <span className="text-[#736E68]">Direct from Certified Orchards</span>
+                      <div className="bg-gray-50/80 px-6 py-3 border-t border-gray-100 flex justify-between items-center text-xs">
+                        <span className="text-gray-500">Premium Export Commodities</span>
                         <Link 
                           href={link.href} 
                           onClick={() => setActiveDropdown(null)} 
-                          className="font-semibold text-[#1E2E21] hover:text-[#C26D38] flex items-center gap-1 transition-colors"
+                          className="font-semibold text-[#14532D] hover:text-[#C8A14A] flex items-center gap-1 transition-colors"
                         >
-                          Explore full catalog <ChevronRight className="w-3.5 h-3.5" />
+                          View all products <ChevronRight className="w-3.5 h-3.5" />
                         </Link>
                       </div>
                     </motion.div>
@@ -171,7 +171,11 @@ export function Header({ isAdmin = false, adminName = 'Admin' }: { isAdmin?: boo
         <div className="hidden lg:flex items-center gap-4">
           <Link
             href="/contact-us/request-import-quote"
-            className="group inline-flex items-center justify-center gap-2 rounded-full px-6 py-2.5 text-sm font-semibold bg-[#C26D38] text-white hover:bg-[#A8582B] shadow-[0_4px_15px_rgba(194,109,56,0.25)] hover:shadow-[0_8px_25px_rgba(194,109,56,0.35)] hover:-translate-y-0.5 transition-all duration-300"
+            className={`group inline-flex items-center justify-center gap-2 rounded-full px-6 py-2.5 text-sm font-semibold transition-all duration-300 ${
+              headerTransparent
+                ? "bg-white text-[#14532D] hover:bg-[#C8A14A] hover:text-white"
+                : "bg-[#14532D] text-white hover:bg-[#C8A14A]"
+            } shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_25px_rgba(200,161,74,0.3)] hover:-translate-y-0.5`}
           >
             <span>Request Quote</span>
             <ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -179,7 +183,7 @@ export function Header({ isAdmin = false, adminName = 'Admin' }: { isAdmin?: boo
 
           {isAdmin && (
             <div className="relative group/admin cursor-pointer ml-1">
-              <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors ${headerTransparent ? "bg-white/20 text-white hover:bg-white/30" : "bg-[#1E2E21]/10 text-[#1E2E21] hover:bg-[#1E2E21]/20"}`}>
+              <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors ${headerTransparent ? "bg-white/20 text-white hover:bg-white/30" : "bg-[#14532D]/10 text-[#14532D] hover:bg-[#14532D]/20"}`}>
                 <User className="w-5 h-5" />
               </div>
               <div className="absolute right-0 top-full pt-4 opacity-0 invisible group-hover/admin:opacity-100 group-hover/admin:visible transition-all duration-300 z-50">
@@ -189,7 +193,7 @@ export function Header({ isAdmin = false, adminName = 'Admin' }: { isAdmin?: boo
                     <p className="text-xs text-gray-500">Administrator</p>
                   </div>
                   <div className="p-2 flex flex-col gap-1">
-                    <Link href="/admin" className="flex items-center gap-2 px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#1E2E21] rounded-lg transition-colors">
+                    <Link href="/admin" className="flex items-center gap-2 px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#14532D] rounded-lg transition-colors">
                       <LayoutDashboard className="w-4 h-4" /> Dashboard
                     </Link>
                     <Link href="/api/auth/signout" className="flex items-center gap-2 px-3 py-2 text-sm text-red-600 hover:bg-red-50 rounded-lg transition-colors">
@@ -209,9 +213,9 @@ export function Header({ isAdmin = false, adminName = 'Admin' }: { isAdmin?: boo
           aria-label="Toggle Menu"
         >
           {isMobileMenuOpen ? (
-            <X className={`w-6 h-6 ${headerTransparent ? "text-white" : "text-[#1C1917]"}`} />
+            <X className={`w-6 h-6 ${headerTransparent ? "text-white" : "text-[#1A1A1A]"}`} />
           ) : (
-            <Menu className={`w-6 h-6 ${headerTransparent ? "text-white" : "text-[#1C1917]"}`} />
+            <Menu className={`w-6 h-6 ${headerTransparent ? "text-white" : "text-[#1A1A1A]"}`} />
           )}
         </button>
       </div>
@@ -224,18 +228,18 @@ export function Header({ isAdmin = false, adminName = 'Admin' }: { isAdmin?: boo
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="absolute top-full left-0 w-full bg-[#FAF8F5] shadow-2xl border-t border-[#E6DFD5] lg:hidden overflow-hidden"
+            className="absolute top-full left-0 w-full bg-white shadow-2xl border-t border-gray-100 lg:hidden overflow-hidden"
           >
             <nav className="flex flex-col py-6 px-6 gap-2 max-h-[75vh] overflow-y-auto">
               {navLinks.map((link) => (
-                <div key={link.name} className="border-b border-[#E6DFD5]/60 last:border-0 pb-2">
+                <div key={link.name} className="border-b border-gray-100 last:border-0 pb-2">
                   {link.megaMenu ? (
                     <div className="flex flex-col">
                       <div className="flex items-center justify-between py-2">
                         <Link 
                           href={link.href} 
                           onClick={() => setIsMobileMenuOpen(false)}
-                          className="text-lg font-medium text-[#1C1917] hover:text-[#C26D38] transition-colors"
+                          className="text-lg font-medium text-[#1A1A1A] hover:text-[#14532D] transition-colors"
                         >
                           {link.name}
                         </Link>
@@ -244,7 +248,7 @@ export function Header({ isAdmin = false, adminName = 'Admin' }: { isAdmin?: boo
                             e.preventDefault();
                             setActiveDropdown(activeDropdown === link.name ? null : link.name);
                           }}
-                          className="p-2 text-[#736E68] hover:text-[#1E2E21]"
+                          className="p-2 text-gray-500 hover:text-[#14532D]"
                         >
                           <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === link.name ? "rotate-180" : ""}`} />
                         </button>
@@ -258,7 +262,7 @@ export function Header({ isAdmin = false, adminName = 'Admin' }: { isAdmin?: boo
                             exit={{ opacity: 0, height: 0 }}
                             className="overflow-hidden"
                           >
-                            <div className="pl-4 border-l-2 border-[#C26D38]/40 ml-2 mt-1 mb-3 flex flex-col gap-2.5">
+                            <div className="pl-4 border-l-2 border-[#C8A14A]/40 ml-2 mt-1 mb-3 flex flex-col gap-2.5">
                               {link.megaMenu.map((item) => {
                                 const Icon = item.icon;
                                 return (
@@ -266,12 +270,12 @@ export function Header({ isAdmin = false, adminName = 'Admin' }: { isAdmin?: boo
                                     key={item.name}
                                     href={item.href}
                                     onClick={() => setIsMobileMenuOpen(false)}
-                                    className="flex items-center gap-3 text-base text-[#736E68] hover:text-[#1E2E21] transition-colors py-1 group/mobitem"
+                                    className="flex items-center gap-3 text-base text-gray-600 hover:text-[#14532D] transition-colors py-1 group/mobitem"
                                   >
-                                    <div className="w-6 h-6 rounded-md bg-[#C26D38]/10 text-[#C26D38] flex items-center justify-center shrink-0">
+                                    <div className="w-6 h-6 rounded-md bg-[#C8A14A]/10 text-[#C8A14A] flex items-center justify-center shrink-0">
                                       <Icon className="w-3.5 h-3.5" />
                                     </div>
-                                    <span className="font-medium text-sm text-[#1C1917]">{item.name}</span>
+                                    <span className="font-medium text-sm text-[#1A1A1A]">{item.name}</span>
                                   </Link>
                                 );
                               })}
@@ -284,7 +288,7 @@ export function Header({ isAdmin = false, adminName = 'Admin' }: { isAdmin?: boo
                     <Link
                       href={link.href}
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className="text-lg font-medium text-[#1C1917] hover:text-[#C26D38] transition-colors py-2 block"
+                      className="text-lg font-medium text-[#1A1A1A] hover:text-[#14532D] transition-colors py-2 block"
                     >
                       {link.name}
                     </Link>
@@ -294,7 +298,7 @@ export function Header({ isAdmin = false, adminName = 'Admin' }: { isAdmin?: boo
               <Link
                 href="/contact-us/request-import-quote"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="mt-6 inline-flex items-center justify-center rounded-full bg-[#C26D38] text-white px-6 py-3.5 text-base font-semibold hover:bg-[#A8582B] transition-colors shadow-lg"
+                className="mt-6 inline-flex items-center justify-center rounded-full bg-[#14532D] text-white px-6 py-3.5 text-base font-semibold hover:bg-[#0f3d20] transition-colors shadow-lg"
               >
                 Request Quote
               </Link>
